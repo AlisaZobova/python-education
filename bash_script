@@ -1,0 +1,11 @@
+#!/bin/bash
+echo -e "\n\033[1m\033[36mSorted listing of files in the current directory:"
+tput sgr0
+ls -1
+echo -e "\n\033[1m\033[36mList of directory subdirectories and their content:"
+tput sgr0
+ls -1R
+echo -e "\n\033[1m\033[36mCurrent date and time:"
+tput sgr0
+date +"%d/%m/%Y %H:%M:%S"
+echo -e "\n"
