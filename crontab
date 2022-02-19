@@ -1,0 +1,3 @@
+0 * * * * ./script_cron >> ./time
+
+0 7 * * * curl -o ./weather.json "https://api.openweathermap.org/data/2.5/weather?q=Kharkiv&appid=459b29d2f05a59a3f1e85e220fa3b14d"
