@@ -1,0 +1,27 @@
+version: 1
+formatters:
+  console:
+    format: '%(message)s'
+  file:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  file_game:
+    format: '%(asctime)s -  %(message)s'
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: console
+    stream: ext://sys.stdout
+  file:
+    class: logging.FileHandler
+    level: INFO
+    formatter: file
+    filename: 'file.log'
+  file_game:
+    class: logging.FileHandler
+    level: CRITICAL
+    formatter: file_game
+    filename: 'file_game.log'
+root:
+  level: INFO
+  handlers: [file, console, file_game]
